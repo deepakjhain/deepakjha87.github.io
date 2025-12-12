@@ -1,267 +1,404 @@
-<!DOCTYPE html>
-<!--[if IE 8]>
-<html lang="en" class="ie8">
-  <![endif]-->
-  <!--[if IE 9]>
-  <html lang="en" class="ie9">
-    <![endif]-->
-    <!--[if !IE]><!-->
-    <html lang="en">
-      <!--<![endif]-->
-      <head>
-        <title>Deepak Kumar Jha</title>
-        <!-- Meta -->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Deepak Jha's Website">
-        <meta name="keywords" content="Deepak Jha, Deepak kumar Jha,@deepakjha,@dipujha63,@fernsnpetals">
-        <meta name="author" content="Deepak Jha">
-        <meta name="google-site-verification" content="ekknKNpikoYf67IBiuj7Gu9XwmcoZ1-ys5IlX8LAcQE" />
-        <link rel="shortcut icon" href="favicon.ico">
-        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-        <!-- Global CSS -->
-        <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-        <!-- Plugins CSS -->
-        <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
-        <!-- github calendar css -->
-        <link rel="stylesheet" href="assets/plugins/github-calendar/dist/github-calendar.css"
-          />
-        <!-- github acitivity css -->
-        <link rel="stylesheet" href="assets/plugins/github-activity/src/github-activity.css">
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
-        <!-- Theme CSS -->
-        <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-        <!-- Google Tag Manager -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-MNKNC22');</script>
-        <!-- End Google Tag Manager -->
-      </head>
-      <body>
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MNKNC22"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
-        <!-- ******HEADER****** -->
-        <header class="header">
-          <div class="container">
-            <img class="profile-image img-responsive pull-left" src="assets/images/profile.png" alt="James Lee" />
-            <div class="profile-content pull-left">
-              <h1 class="name">Deepak Jha</h1>
-              <h2 class="desc">Senior Software Engineer</h2>
-              <ul class="social list-inline">
-                <li><a href="//twitter.com/dipujha63"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="//plus.google.com/u/1/+DeepakJhaD"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="//linkedin.com/in/deepak-kumar-jha"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="//github.com/Deepakjha87"><i class="fa fa-github-alt"></i></a></li>
-                <li class="last-item"><a href="https://www.facebook.com/crazyyyymind"><i class="fa fa-facebook"></i></a></li>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Deepak Kumar Jha — Technical Lead • Architecture & Platform Engineering</title>
+  <meta name="description" content="Deepak Kumar Jha — Technical Lead (Architecture & Platform Engineering). Microservices, Cloud-native systems, Event-driven architecture and AI-driven automation for BFSI & Fintech." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#071023">
+  <style>
+    :root{
+      --bg:#071023;
+      --panel:#071827;
+      --muted:#9fb0c7;
+      --accent:#0fb1a8;
+      --accent-2:#06b6d4;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      --maxw:1100px;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;}
+    body{
+      margin:0;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(11,23,35,0.6), transparent),
+                  linear-gradient(180deg,var(--bg), #041021 90%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding:28px 20px;
+      display:flex;
+      justify-content:center;
+      font-size:16px;
+    }
+    .container{width:100%; max-width:var(--maxw);}
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:28px;
+    }
+    .brand{display:flex; gap:12px; align-items:center;}
+    .avatar{
+      width:64px; height:64px; border-radius:14px;
+      background:linear-gradient(135deg,#052a36,#05385a);
+      display:flex; align-items:center; justify-content:center; font-weight:800; font-size:20px;
+      color:var(--accent);
+      box-shadow:0 10px 30px rgba(3,7,18,0.6);
+    }
+    nav{display:flex; gap:12px; align-items:center;}
+    nav a{color:var(--muted); text-decoration:none; padding:8px 10px; border-radius:10px; font-weight:700; font-size:14px;}
+    nav a:hover{color:#fff; background:rgba(255,255,255,0.02);}
+    .buttons{display:flex; gap:10px; align-items:center;}
+    .btn{
+      display:inline-flex; gap:10px; align-items:center;
+      background:linear-gradient(90deg,var(--accent), var(--accent-2));
+      color:#042027; font-weight:800; padding:10px 14px; border-radius:12px; text-decoration:none;
+      box-shadow:0 10px 30px rgba(11,177,163,0.12); font-size:14px;
+    }
+    .btn.ghost{
+      background:transparent; color:var(--muted); border:1px solid rgba(255,255,255,0.03); box-shadow:none; font-weight:700;
+    }
+    main{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      border-radius:18px; padding:28px; box-shadow: 0 20px 60px rgba(2,6,23,0.6); backdrop-filter: blur(6px);
+    }
+    .grid{display:grid; grid-template-columns: 1fr 360px; gap:28px;}
+    @media (max-width:980px){ .grid{grid-template-columns:1fr;} header{flex-direction:column; align-items:flex-start; gap:16px;} }
+    .hero{display:flex; gap:20px; align-items:flex-start;}
+    .headline{margin:0 0 12px 0; font-weight:800; color:#fff; font-size:26px; letter-spacing:-0.4px;}
+    .kicker{display:inline-block; padding:6px 10px; border-radius:999px; background:rgba(255,255,255,0.02); font-weight:800; color:var(--accent); font-size:13px; margin-bottom:12px;}
+    .sub{color:var(--muted); margin:0 0 18px 0; max-width:64ch;}
+    .stat-row{display:flex; gap:14px; margin-top:14px; flex-wrap:wrap;}
+    .stat{background:var(--glass); padding:12px 14px; border-radius:12px; min-width:120px; text-align:center; font-weight:800;}
+    .stat small{display:block; font-weight:700; color:var(--muted); font-size:12px;}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent); padding:20px; border-radius:14px; border:1px solid rgba(255,255,255,0.02);}
+    h2{margin:6px 0 12px 0; font-size:18px; color:#fff;}
+    .lead{color:var(--muted); margin:0 0 12px 0;}
+    .skills-grid{display:flex; gap:10px; flex-wrap:wrap;}
+    .skill-pill{background:rgba(255,255,255,0.02); padding:8px 12px; border-radius:999px; font-weight:700; color:var(--muted); border:1px solid rgba(255,255,255,0.02); font-size:13px;}
+    .progress{background:rgba(255,255,255,0.03); border-radius:10px; height:10px; width:100%; overflow:hidden;}
+    .progress > span{display:block; height:100%; background:linear-gradient(90deg,var(--accent), var(--accent-2));}
+    .exp-item{background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent); padding:12px; border-radius:10px; border:1px solid rgba(255,255,255,0.02); margin-bottom:12px;}
+    .exp-item h3{margin:0; font-size:15px;}
+    .meta{color:var(--muted); font-size:13px; margin-bottom:8px; display:flex; gap:8px; flex-wrap:wrap;}
+    .bullets{margin:6px 0 0 0; padding-left:18px;}
+    .bullets li{margin-bottom:6px; color:var(--muted); font-size:14px;}
+    .projects{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+    @media (max-width:720px){ .projects{grid-template-columns:1fr;} }
+    footer{margin-top:18px; color:var(--muted); font-size:13px; text-align:center;}
+    .muted{color:var(--muted);}
+    .pill-outline{border-radius:8px; padding:6px 8px; border:1px solid rgba(255,255,255,0.03); font-weight:700;}
+    .tag{display:inline-block; padding:6px 10px; border-radius:999px; background:rgba(255,255,255,0.02); font-weight:800; color:var(--muted); margin:6px 6px 0 0; font-size:13px;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar" aria-hidden="true">DJ</div>
+        <div>
+          <div style="font-weight:800">Deepak Kumar Jha</div>
+          <div style="color:var(--muted); font-size:13px; margin-top:2px">Technical Lead – Architecture & Platform Engineering</div>
+        </div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="buttons">
+        <a class="btn" href="/assets/Deepak_Jha_Resume.pdf" download>
+          <svg style="width:16px;height:16px" viewBox="0 0 24 24" fill="none"><path d="M12 3v12" stroke="#042027" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 11l4 4 4-4" stroke="#042027" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 21H3" stroke="#042027" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Download Resume
+        </a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/deepakjha-in" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </header>
+
+    <main>
+      <div class="grid">
+        <div>
+          <!-- HERO -->
+          <section class="hero" id="home" aria-labelledby="hero-heading">
+            <div>
+              <div class="kicker">Architecture & Platform Engineering</div>
+              <h1 class="headline" id="hero-heading">
+                Technical Lead — Architecture & Platform Engineering
+              </h1>
+
+              <p class="sub">
+                I help enterprises design and implement scalable, secure, and observable systems — specializing in
+                <strong>microservices, cloud-native platforms, event-driven integration, API-first design,</strong> and AI-enabled automation.
+                My background in high-throughput e-commerce and BFSI systems helps me balance business requirements with technical constraints.
+              </p>
+
+              <div style="display:flex; gap:12px; align-items:center;">
+                <a class="btn" href="#contact">Request a Call</a>
+                <a class="btn ghost" href="mailto:mailtoj.deepak@gmail.com">mailtoj.deepak@gmail.com</a>
+              </div>
+
+              <div class="stat-row" role="list" aria-label="Key metrics">
+                <div class="stat" role="listitem">
+                  <div style="font-size:18px">11+ yrs</div>
+                  <small>Software & Leadership</small>
+                </div>
+                <div class="stat" role="listitem">
+                  <div style="font-size:18px">6–10</div>
+                  <small>Team Size</small>
+                </div>
+                <div class="stat" role="listitem">
+                  <div style="font-size:18px">~40%</div>
+                  <small>Faster release velocity (CI/CD)</small>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ABOUT -->
+          <section id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">About</h2>
+            <p class="lead">
+              I am a Technical Lead with 11+ years of hands-on experience building and evolving backend platforms for Banking, Fintech, and E-commerce.
+              I focus on solutioning for long-term maintainability: shaping service boundaries, defining API contracts, and enabling platform teams to build reliably at scale.
+            </p>
+
+            <p class="lead muted">
+              I partner with product and engineering to convert business goals into technical roadmaps — emphasizing observability, resilience, security, and cost efficiency.
+            </p>
+          </section>
+
+          <!-- SKILLS -->
+          <section id="skills" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Skills</h2>
+            <p class="lead muted">Core technologies, architecture patterns, and platform capabilities I deliver.</p>
+
+            <div class="skills-grid" role="list">
+              <span class="skill-pill">Solution Design</span>
+              <span class="skill-pill">Domain-Driven Design (DDD)</span>
+              <span class="skill-pill">Microservices</span>
+              <span class="skill-pill">Event-Driven Architecture</span>
+              <span class="skill-pill">API Strategy & Gateways</span>
+              <span class="skill-pill">Java 8–17</span>
+              <span class="skill-pill">Spring Boot / Spring Cloud</span>
+              <span class="skill-pill">Kafka / RabbitMQ</span>
+              <span class="skill-pill">Docker • Kubernetes</span>
+              <span class="skill-pill">CI/CD Architecture</span>
+              <span class="skill-pill">Observability (Prometheus, ELK)</span>
+              <span class="skill-pill">Cloud: AWS / GCP</span>
+              <span class="skill-pill">LLM & AI Integrations</span>
+              <span class="skill-pill">Security & Compliance</span>
+            </div>
+
+            <div style="margin-top:14px;">
+              <div style="display:flex; gap:12px; align-items:center;">
+                <div style="flex:1">
+                  <div style="display:flex; justify-content:space-between; margin-bottom:6px;"><strong>Architecture & Design</strong><span class="muted">90%</span></div>
+                  <div class="progress" aria-hidden="true"><span style="width:90%"></span></div>
+                </div>
+                <div style="width:12px"></div>
+                <div style="flex:1">
+                  <div style="display:flex; justify-content:space-between; margin-bottom:6px;"><strong>Platform Engineering</strong><span class="muted">80%</span></div>
+                  <div class="progress" aria-hidden="true"><span style="width:80%"></span></div>
+                </div>
+              </div>
+
+              <div style="height:12px"></div>
+
+              <div style="display:flex; gap:12px; align-items:center;">
+                <div style="flex:1">
+                  <div style="display:flex; justify-content:space-between; margin-bottom:6px;"><strong>Cloud & DevOps</strong><span class="muted">72%</span></div>
+                  <div class="progress" aria-hidden="true"><span style="width:72%"></span></div>
+                </div>
+                <div style="width:12px"></div>
+                <div style="flex:1">
+                  <div style="display:flex; justify-content:space-between; margin-bottom:6px;"><strong>AI & Automation</strong><span class="muted">62%</span></div>
+                  <div class="progress" aria-hidden="true"><span style="width:62%"></span></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ARCHITECTURE -->
+          <section id="architecture" aria-labelledby="architecture-heading">
+            <h2 id="architecture-heading">Architecture Focus</h2>
+            <p class="lead muted">How I approach designing systems that scale and endure.</p>
+            <ul class="bullets">
+              <li>Define clear service boundaries using Domain-Driven Design to reduce cognitive load and increase maintainability.</li>
+              <li>Adopt event-driven patterns for loose coupling and resilient integrations (Kafka-based messaging).</li>
+              <li>Design API contracts with versioning, throttling, and gateway-level policies for stability and security.</li>
+              <li>Design for observability: metrics, traces, and structured logs to speed up incident resolution.</li>
+              <li>Plan for non-functional requirements: performance, availability, recoverability, and security-by-design.</li>
+              <li>Mentor engineering teams to implement architecture standards and platform best practices.</li>
+            </ul>
+          </section>
+
+          <!-- EXPERIENCE -->
+          <section id="experience" aria-labelledby="experience-heading">
+            <h2 id="experience-heading">Experience</h2>
+
+            <div class="exp-item" role="article" aria-labelledby="exp1">
+              <h3 id="exp1">Technical Lead — Tech Mahindra</h3>
+              <div class="meta">Apr 2023 — Present • Mumbai, India • Team: 6–8</div>
+              <ul class="bullets">
+                <li>Architecting microservices-based platforms for BFSI modernization programs.</li>
+                <li>Created high-level and low-level designs, API specifications, and migration roadmaps for legacy systems.</li>
+                <li>Led PoCs for event-driven solutions (Kafka) and platform components to validate scalability and reliability.</li>
+                <li>Introduced CI/CD & automated testing, decreasing release times and increasing deployment confidence.</li>
               </ul>
             </div>
-            <!--//profile-->
-            <a class="btn btn-cta-primary pull-right" href="mailto:dipujha63@gmail.com" target="_blank"><i class="fa fa-paper-plane"></i> Contact Me</a>
-          </div>
-          <!--//container-->
-        </header>
-        <!--//header-->
-        <div class="container sections-wrapper">
-          <div class="row">
-            <div class="primary col-md-8 col-sm-12 col-xs-12">
-              <section class="about section">
-                <div class="section-inner">
-                  <h2 class="heading">About Me</h2>
-                  <div class="content">
-                    <p>I strongly believe that "Every work is possible and we can most difficult tasks". Then why we fail in our task. I thought the reason is planning and willingness.</p>
-                    <p>I always try to improve my knowledge and skill. Work that supports my family, friend and country I always select those work. That is my thought now here is my personal info.</p>
-                    <p>Now I am working in eCommerce company as a Senior Software Engineer.</p>
-                  </div>
-                  <!--//content-->
-                </div>
-                <!--//section-inner-->
-              </section>
-              <!--//section-->
-              <section class="experience section">
-                <div class="section-inner">
-                  <h2 class="heading">Work Experience</h2>
-                  <div class="content">
-                    <div class="item">
-                      <h3 class="title">Senior Software Engineer- <span class="place"><a href="https://www.fnp.com/">fernsnpetals Pvt. Ltd :</a></span> <span class="year">(2014 - Present)</span></h3>
-                      <p>Providing direct support & development of the software applications, involving all phases of the software development life cycle (SDLC) for development functions related to large complex applications & software programs.</p>
-                    </div>
-                  </div>
-                  <!--//content-->
-                </div>
-                <!--//section-inner-->
-              </section>
-              <!--//section-->
-              <section class="github section">
-                <div class="section-inner">
-                  <h2 class="heading">My GitHub</h2>
-                  <!--//Usage: http://caseyscarborough.com/projects/github-activity/ -->
-                  <div id="ghfeed" class="ghfeed">
-                  </div>
-                  <!--//ghfeed-->
-                </div>
-                <!--//secton-inner-->
-              </section>
-              <!--//section-->
+
+            <div class="exp-item" role="article" aria-labelledby="exp2">
+              <h3 id="exp2">Module Lead — Ferns N Petals (FNP)</h3>
+              <div class="meta">Sep 2020 — Apr 2023 • New Delhi • Team: 6+</div>
+              <ul class="bullets">
+                <li>Owned core e-commerce modules: orders, payments, checkout, and logistics; led migration of monolith modules to services.</li>
+                <li>Improved checkout throughput and reduced SLA breaches via performance tuning and fault isolation.</li>
+                <li>Collaborated across product, QA, and operations for delivery and reliability improvements.</li>
+              </ul>
             </div>
-            <!--//primary-->
-            <div class="secondary col-md-4 col-sm-12 col-xs-12">
-              <aside class="info aside section">
-                <div class="section-inner">
-                  <h2 class="heading sr-only">Basic Information</h2>
-                  <div class="content">
-                    <ul class="list-unstyled">
-                      <li><i class="fa fa-map-marker"></i><span class="sr-only">Location:</span>Hyderabad, India</li>
-                      <li><i class="fa fa-envelope-o"></i><span class="sr-only">Email:</span><a href="mailto:dipujha63@gmail.com">dipujha63@gmail.com</a></li>
-                      <li><i class="fa fa-link"></i><span class="sr-only">Website:</span><a href="http://deepakjha.in/">http://deepakjha.in/</a></li>
-                    </ul>
-                  </div>
-                  <!--//content-->
-                </div>
-                <!--//section-inner-->
-              </aside>
-              <!--//aside-->
-              <aside class="skills aside section">
-                <div class="section-inner">
-                  <h2 class="heading">Skills</h2>
-                  <div class="content">
-                    <div class="skillset">
-                      <div class="item">
-                        <h3 class="level-title">Java <span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="You can use the tooltip to add more info...">Expert</span></h3>
-                        <div class="level-bar">
-                          <div class="level-bar-inner" data-level="85%">
-                          </div>
-                        </div>
-                        <!--//level-bar-->
-                      </div>
-                      <!--//item-->
-                      <div class="item">
-                        <h3 class="level-title">Javascript &amp; jQuery<span class="level-label">Expert</span></h3>
-                        <div class="level-bar">
-                          <div class="level-bar-inner" data-level="70%">
-                          </div>
-                        </div>
-                        <!--//level-bar-->
-                      </div>
-                      <!--//item-->
-                      <div class="item">
-                        <h3 class="level-title">HTML5 &amp; CSS3<span class="level-label">Expert</span></h3>
-                        <div class="level-bar">
-                          <div class="level-bar-inner" data-level="70%">
-                          </div>
-                        </div>
-                        <!--//level-bar-->
-                      </div>
-                      <!--//item-->
-                      <div class="item">
-                        <h3 class="level-title">Ofbiz<span class="level-label">Pro</span></h3>
-                        <div class="level-bar">
-                          <div class="level-bar-inner" data-level="95%">
-                          </div>
-                        </div>
-                        <!--//level-bar-->
-                      </div>
-                      <div class="item">
-                        <h3 class="level-title">GTM,GA &amp; Adobe DTM <span class="level-label">Pro</span></h3>
-                        <div class="level-bar">
-                          <div class="level-bar-inner" data-level="96%">
-                          </div>
-                        </div>
-                        <!--//level-bar-->
-                      </div>
-                      <!--//item-->
-                      <p><a class="more-link" href="//linkedin.com/in/deepak-kumar-jha"><i class="fa fa-external-link"></i> More on Linkedin</a></p>
-                    </div>
-                  </div>
-                  <!--//content-->
-                </div>
-                <!--//section-inner-->
-              </aside>
-              <!--//section-->
-              <aside class="education aside section">
-                <div class="section-inner">
-                  <h2 class="heading">Education</h2>
-                  <div class="content">
-                    <div class="item">
-                      <h3 class="title"><i class="fa fa-graduation-cap"></i> Master Of Computer Application</h3>
-                      <h4 class="university">IGNOU <span class="year">(2009-2012)</span></h4>
-                    </div>
-                    <!--//item-->
-                    <div class="item">
-                      <h3 class="title"><i class="fa fa-graduation-cap"></i> Bachelors in Computer Application</h3>
-                      <h4 class="university">IGNOU <span class="year">(2005-2009)</span></h4>
-                    </div>
-                    <!--//item-->
-                  </div>
-                  <!--//content-->
-                </div>
-                <!--//section-inner-->
-              </aside>
-              <!--//section-->
-              <aside class="languages aside section">
-                <div class="section-inner">
-                  <h2 class="heading">Languages</h2>
-                  <div class="content">
-                    <ul class="list-unstyled">
-                      <li class="item">
-                        <span class="title"><strong>English :</strong></span>
-                        <span class="level">Professional :<br class="visible-xs"/><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </span>
-                      </li>
-                      <!--//item-->
-                      <li class="item">
-                        <span class="title"><strong>Hindi :</strong></span>
-                        <span class="level">Professional <br class="visible-xs"/><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half"></i></span>
-                      </li>
-                      <!--//item-->
-                      <!--//item-->
-                      <li class="item">
-                        <span class="title"><strong>Maithili :</strong></span>
-                        <span class="level">Professional<br class="visible-xs"/><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half"></i></span>
-                      </li>
-                      <!--//item-->
-                    </ul>
-                  </div>
-                  <!--//content-->
-                </div>
-                <!--//section-inner-->
-              </aside>
+
+            <div class="exp-item" role="article" aria-labelledby="exp3">
+              <h3 id="exp3">Senior Software Engineer — Ferns N Petals</h3>
+              <div class="meta">Apr 2018 — Sep 2020 • New Delhi</div>
+              <ul class="bullets">
+                <li>Backend development for high-traffic e-commerce workflows and third-party integrations.</li>
+                <li>Focused on performance optimization and production stability.</li>
+              </ul>
             </div>
-            <!--//secondary-->
-          </div>
-          <!--//row-->
+
+            <div class="exp-item" role="article" aria-labelledby="exp4">
+              <h3 id="exp4">Java Developer — Ferns N Petals</h3>
+              <div class="meta">Dec 2014 — Apr 2018 • New Delhi / Hyderabad</div>
+              <ul class="bullets">
+                <li>Built foundational backend modules, APIs, and database models for order management systems.</li>
+                <li>Contributed to enhancements that improved throughput and reduced error rates.</li>
+              </ul>
+            </div>
+
+          </section>
+
+          <!-- PROJECTS -->
+          <section id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Selected Projects</h2>
+            <p class="lead muted">Short, scannable summaries for hiring managers and recruiters.</p>
+
+            <div class="projects">
+              <div class="card" role="article">
+                <h3 style="margin:0 0 8px 0">BFSI Modernization — Event-Driven Platform</h3>
+                <div class="muted" style="font-size:13px; margin-bottom:8px;">Tech Mahindra — 2023–Present</div>
+                <p class="muted" style="margin:0 0 8px 0">
+                  Led design of an event-driven microservices platform replacing legacy batch-oriented modules. Implemented message-driven flows, idempotency, and improved scalability by ~5× with better fault isolation.
+                </p>
+                <div style="margin-top:8px;">
+                  <span class="tag">Microservices</span><span class="tag">Kafka</span><span class="tag">Resilience</span>
+                </div>
+              </div>
+
+              <div class="card" role="article">
+                <h3 style="margin:0 0 8px 0">E-commerce Platform Optimization</h3>
+                <div class="muted" style="font-size:13px; margin-bottom:8px;">FNP — 2020–2023</div>
+                <p class="muted" style="margin:0 0 8px 0">
+                  Improved checkout & order pipeline performance, optimized DB queries and async flows to reduce latency and SLA breaches across peak loads.
+                </p>
+                <div style="margin-top:8px;">
+                  <span class="tag">Payments</span><span class="tag">Scaling</span><span class="tag">Performance</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- CTA -->
+          <section aria-labelledby="cta" style="margin-top:18px">
+            <h2 id="cta">Ready for Platform & Architecture Challenges</h2>
+            <p class="lead muted">I collaborate with teams and leaders to design resilient, cost-efficient, and maintainable systems — open to senior engineering, platform, and architecture-track roles.</p>
+            <div style="display:flex; gap:12px;">
+              <a class="btn" href="mailto:mailtoj.deepak@gmail.com">Discuss Your Platform</a>
+              <a class="btn ghost" href="https://www.linkedin.com/in/deepakjha-in" target="_blank" rel="noopener">View LinkedIn</a>
+            </div>
+          </section>
         </div>
-        <!--//masonry-->
-        <!-- ******FOOTER****** -->
-        <footer class="footer">
-          <div class="container text-center">
-            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
-            <small class="copyright">Designed with <i class="fa fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+
+        <!-- RIGHT COLUMN -->
+        <aside>
+          <div class="card" role="region" aria-label="Contact details">
+            <h3 style="margin-top:0">Contact</h3>
+            <div style="display:flex; gap:12px; align-items:center; margin-bottom:12px;">
+              <svg style="width:18px;height:18px;opacity:0.9" viewBox="0 0 24 24" fill="none"><path d="M22 16.92V21a1 1 0 0 1-1.11 1 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2 3.11 1 1 0 0 1 3 2h4.09a1 1 0 0 1 1 .75c.12.66.29 1.3.5 1.92a1 1 0 0 1-.24 1L7.91 7.91a13 13 0 0 0 6 6l1.24-1.24a1 1 0 0 1 1-.24c.62.2 1.26.38 1.92.5a1 1 0 0 1 .75 1V21z" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <div>
+                <div class="muted" style="font-size:13px">Phone</div>
+                <a href="tel:+918882220588" style="color:#e6eef6; font-weight:700; text-decoration:none">+91 88822 0588</a>
+              </div>
+            </div>
+            <div style="display:flex; gap:12px; align-items:center; margin-bottom:12px;">
+              <svg style="width:18px;height:18px;opacity:0.9" viewBox="0 0 24 24" fill="none"><path d="M3 8.5v7.5a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 6H3l9 7 9-7z" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <div>
+                <div class="muted" style="font-size:13px">Email</div>
+                <a href="mailto:mailtoj.deepak@gmail.com" style="color:#e6eef6; font-weight:700; text-decoration:none">mailtoj.deepak@gmail.com</a>
+              </div>
+            </div>
+
+            <div style="height:12px"></div>
+            <div style="display:flex; gap:8px; flex-wrap:wrap;">
+              <a class="pill-outline" href="/assets/Deepak_Jha_Resume.pdf" download>Download Resume (PDF)</a>
+              <a class="pill-outline" href="https://www.linkedin.com/in/deepakjha-in" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
           </div>
-          <!--//container-->
-        </footer>
-        <!--//footer-->
-        <!-- Javascript -->
-        <script type="text/javascript" src="assets/plugins/jquery-1.11.3.min.js"></script>
-        <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="assets/plugins/jquery-rss/dist/jquery.rss.min.js"></script>
-        <!-- github calendar plugin -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/3.0.2/es6-promise.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fetch/0.10.1/fetch.min.js"></script>
-        <script type="text/javascript" src="assets/plugins/github-calendar/dist/github-calendar.min.js"></script>
-        <!-- github activity plugin -->
-        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
-        <script type="text/javascript" src="assets/plugins/github-activity/src/github-activity.js"></script>
-        <!-- custom js -->
-        <script type="text/javascript" src="assets/js/main.js"></script>
-      </body>
-    </html>
+
+          <div style="height:14px"></div>
+
+          <div class="card">
+            <h3 style="margin-top:0">Quick Facts</h3>
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <div class="muted"><strong>Domain:</strong> Banking, Fintech & E-commerce</div>
+              <div class="muted"><strong>Focus:</strong> Architecture guidance, Platform engineering</div>
+              <div class="muted"><strong>Experience:</strong> Dec 2014 — Present (11+ years)</div>
+              <div class="muted"><strong>Location:</strong> Navi Mumbai, India</div>
+            </div>
+          </div>
+
+          <div style="height:14px"></div>
+
+          <div class="card" aria-hidden="true">
+            <h3 style="margin-top:0">Technologies</h3>
+            <div style="display:flex; gap:8px; flex-wrap:wrap;">
+              <span class="tag">Java</span><span class="tag">Spring</span><span class="tag">Kafka</span><span class="tag">Kubernetes</span><span class="tag">AWS</span><span class="tag">CI/CD</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <footer>
+        <div>© <strong>Deepak Kumar Jha</strong> • Technical Lead — Architecture & Platform Engineering • <span class="muted">Navi Mumbai, India</span></div>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // Smooth scroll for internal links
+    (function(){
+      const links = document.querySelectorAll('a[href^="#"]');
+      for(const a of links){
+        a.addEventListener('click', function(e){
+          e.preventDefault();
+          const id = this.getAttribute('href').slice(1);
+          if(!id) return window.scrollTo({top:0, behavior:'smooth'});
+          const el = document.getElementById(id);
+          if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
